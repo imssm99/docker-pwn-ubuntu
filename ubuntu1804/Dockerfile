@@ -24,6 +24,6 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
 COPY .vimrc /root/.vimrc
 COPY .vim /root/.vim
 
-RUN curl https://bootstrap.pypa.io/get-pip.py | python3
+RUN curl https://bootstrap.pypa.io/pip/3.6/get-pip.py | python3
 RUN python3 -m pip install pwntools
 RUN python3 -m pip install ropper keystone-engine
