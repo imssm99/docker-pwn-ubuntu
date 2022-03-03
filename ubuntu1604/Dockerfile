@@ -15,7 +15,8 @@ RUN apt-get install -y vim git
 
 RUN echo "root:root" | chpasswd
 
-RUN bash -c "$(curl -fsSL http://gef.blah.cat/sh)"
+RUN wget -O ~/.gef.py https://raw.githubusercontent.com/hugsy/gef/61782e4bcdb383ed51ba803f32b69be27051eca2/gef.py
+RUN echo "source ~/.gef.py" > ~/.gdbinit
 RUN echo "export LC_ALL=C.UTF-8" >> ~/.bashrc
 
 RUN export echo 'TERM=xterm-256color' >> /root/.bashrc

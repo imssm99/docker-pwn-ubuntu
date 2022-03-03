@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  ubuntu1804:
+    build: ./ubuntu1804
+    container_name: ubuntu1804
+    volumes:
+    - /home:/home
+    cap_add:
+    - SYS_PTRACE
+    ulimits:
+      core: -1
+    security_opt:
+      - seccomp:unconfined
+
+  ubuntu1604:
+    build: ./ubuntu1604
+    container_name: ubuntu1604
+    volumes:
+    - /home:/home
+    cap_add:
+    - SYS_PTRACE
+    ulimits:
+      core: -1
+    security_opt:
+      - seccomp:unconfined
