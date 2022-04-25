@@ -13,8 +13,8 @@ set shiftwidth=4
 set showmatch
 set expandtab
 
-autocmd FileType python map <buffer> <F5> :w<CR>:!clear;python %<CR>
-autocmd FileType python imap <buffer> <F5> <ESC> :w<CR>:!clear;python %<CR>
+autocmd FileType python map <buffer> <F5> :w<CR>:!clear;python3 %<CR>
+autocmd FileType python imap <buffer> <F5> <ESC> :w<CR>:!clear;python3 %<CR>
 
 autocmd FileType c,cpp map <buffer> <F5> :w<CR>:!clear;gcc -o tmp_VIMAUTOCMD %;./tmp_VIMAUTOCMD;rm tmp_VIMAUTOCMD<CR>
 autocmd FileType c,cpp imap <buffer> <F5> <ESC> :w<CR>:!clear;gcc -o tmp_VIMAUTOCMD %;./tmp_VIMAUTOCMD;rm tmp_VIMAUTOCMD<CR>
