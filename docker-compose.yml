@@ -1,6 +1,19 @@
 version: "3.8"
 
 services:
+  ubuntu2004:
+    build: ./ubuntu2004
+    container_name: ubuntu2004
+    volumes:
+    - /home:/home
+    cap_add:
+    - SYS_PTRACE
+    ulimits:
+      core: -1
+    security_opt:
+      - seccomp:unconfined
+    command: sleep infinity
+
   ubuntu1804:
     build: ./ubuntu1804
     container_name: ubuntu1804
@@ -12,6 +25,7 @@ services:
       core: -1
     security_opt:
       - seccomp:unconfined
+    command: sleep infinity
 
   ubuntu1604:
     build: ./ubuntu1604
@@ -24,3 +38,4 @@ services:
       core: -1
     security_opt:
       - seccomp:unconfined
+    command: sleep infinity
