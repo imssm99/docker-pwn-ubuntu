@@ -2,8 +2,6 @@ if has("syntax")
 	syntax on
 endif
 
-colorscheme molokai
-
 set autoindent
 set cindent
 set number

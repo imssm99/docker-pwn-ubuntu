@@ -9,21 +9,21 @@ function dockerpwn {
 }
 
 u20() {
-    if ! dockerpwn ps | grep -q ubuntu2004; then
+    if ! dockerpwn ps | grep -q ubuntu2004 | grep -q Up ; then
         dockerpwn up -d ubuntu2004
     fi
     docker exec -it --workdir=$PWD ubuntu2004 /bin/bash
 }
 
 u18() {
-    if ! dockerpwn ps | grep -q ubuntu1804; then
+    if ! dockerpwn ps | grep -q ubuntu1804 | grep -q Up ; then
         dockerpwn up -d ubuntu1804
     fi
     docker exec -it --workdir=$PWD ubuntu1804 /bin/bash
 }
 
 u16() {
-    if ! dockerpwn ps | grep -q ubuntu1604; then
+    if ! dockerpwn ps | grep -q ubuntu1604 | grep -q Up ; then
         dockerpwn up -d ubuntu1604
     fi
     docker exec -it --workdir=$PWD ubuntu1604 /bin/bash

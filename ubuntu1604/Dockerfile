@@ -22,7 +22,6 @@ RUN echo "export LC_ALL=C.UTF-8" >> ~/.bashrc
 RUN export echo 'TERM=xterm-256color' >> /root/.bashrc
 
 COPY .vimrc /root/.vimrc
-COPY .vim /root/.vim
 
 RUN curl https://bootstrap.pypa.io/pip/3.5/get-pip.py | python3
 RUN python3 -m pip install pwntools
